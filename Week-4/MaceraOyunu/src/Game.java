@@ -1,4 +1,4 @@
-cdimport java.util.Scanner;
+import java.util.Scanner;
 
 public class Game {
     private Scanner input = new Scanner(System.in);
