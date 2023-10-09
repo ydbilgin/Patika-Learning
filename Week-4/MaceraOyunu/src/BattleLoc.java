@@ -5,6 +5,7 @@ public class BattleLoc extends Location {
     private String award;
     private int maxMonster;
     int selectSituation;
+    Random r = new Random();
 
     public BattleLoc(int idLoc, Player player, String name, Monster monster, String award, int maxMonster) {
         super(idLoc, player, name);
@@ -48,7 +49,7 @@ public class BattleLoc extends Location {
 
     public boolean combat(int monsNumber) {
         for (int i = 1; i <= monsNumber; i++) {
-            this.getMonster().setHealth(this.getMonstder().getOrjinalHealth());
+            this.getMonster().setHealth(this.getMonster().getOrjinalHealth());
             playerStats();
             monsterStats(i);
             while (this.getPlayer().getHealth() > 0 && this.getMonster().getHealth() > 0) {
@@ -56,19 +57,25 @@ public class BattleLoc extends Location {
                     System.out.println("1- Savaş\n2- Kaç");
                     selectSituation = input.nextInt();
                     if (selectSituation == 1) {
-                        System.out.println("Siz vurdunuz!");
-                        this.getMonster().setHealth(this.getMonster().getHealth() - this.getPlayer().getTotalDamage());
-                        afterHit();
-                        if (this.getMonster().getHealth()>0){
-                            System.out.println();
-                            System.out.println("Canavar size vurdu ! ");
-                            int monsterDamage = this.getMonster().getDamage()- this.getPlayer().getInventory().getArmor().getBlock();
-                            if (monsterDamage < 0 ){
-                                monsterDamage =0;
-                            }
-                            this.getPlayer().setHealth(this.getPlayer().getHealth()- monsterDamage);
+                        int randomHit = r.nextInt(2);
+                        if (randomHit == 0){
+                            System.out.println("Siz vurdunuz!");
+                            this.getMonster().setHealth(this.getMonster().getHealth() - this.getPlayer().getTotalDamage());
                             afterHit();
+                        }else {
+                            if (this.getMonster().getHealth()>0){
+                                System.out.println();
+                                System.out.println("Canavar size vurdu ! ");
+                                int monsterDamage = this.getMonster().getDamage()- this.getPlayer().getInventory().getArmor().getBlock();
+                                if (monsterDamage < 0 ){
+                                    monsterDamage =0;
+                                }
+                                this.getPlayer().setHealth(this.getPlayer().getHealth()- monsterDamage);
+                                afterHit();
+                            }
                         }
+
+
                     }else {
                         return false;
                     }
