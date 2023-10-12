@@ -88,8 +88,5 @@ public class FixtureGenerator {
         List<String> firstHalfFixture = generateFixture(teams);
     }
 
-    public static void main(String[] args) {
-        FixtureGenerator generator = new FixtureGenerator();
-        generator.startFixture();
-    }
+
 }
