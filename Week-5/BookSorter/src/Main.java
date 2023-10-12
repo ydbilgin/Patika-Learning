@@ -11,14 +11,19 @@ public class Main {
         book.add(new Book("DDDDD",277,"Author 5" , 1915));
 
         System.out.println("Kitapların alfabetik sıralaması : ");
+        System.out.println();
         for (Book b : book){
-            System.out.println(b.getName());
+            System.out.println("Kitap ismi : " + b.getName() + ", Kitap sayfası : " + b.getPageNumber() + ", Kitap Yazarı : " + b.getAuthor() + ", Çıktığı yıl : " + b.getAuthor());
         }
+        System.out.println();
+        System.out.println("############################");
+        System.out.println();
         System.out.println("Kitapların sayfa sayısına göre sıralaması : ");
+        System.out.println();
         TreeSet<Book> bookByPageNumber = new TreeSet<>(new OrderPageComparable());
         bookByPageNumber.addAll(book);
         for (Book b : bookByPageNumber){
-            System.out.println(b.getName());
+            System.out.println("Kitap ismi : " + b.getName() + ", Kitap sayfası : " + b.getPageNumber() + ", Kitap Yazarı : " + b.getAuthor() + ", Çıktığı yıl : " + b.getAuthor());
         }
 
 
