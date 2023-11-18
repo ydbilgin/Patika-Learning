@@ -1,0 +1,57 @@
+package Tourism.View;
+
+import Tourism.Helper.Helper;
+import Tourism.Model.User;
+import Tourism.UserManager.UserManager;
+
+import javax.swing.*;
+
+public class LoginGUI extends JFrame {
+
+    private JPanel wrapper;
+    private JPanel w_top;
+    private JLabel lbl_welcome;
+    private JLabel lbl_welcome2;
+    private JPanel w_bottom;
+    private JTextField fld_username;
+    private JPasswordField fld_pass;
+    private JLabel lbl_username;
+    private JButton btn_login;
+    private JLabel lbl_pass;
+    private final UserManager userManager;
+
+    public LoginGUI(){
+        this.userManager = new UserManager();
+        this.add(wrapper);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setTitle("Giriş Ekranı");
+        this.setSize(400,400);
+        int x = Helper.screenCenter("x", this.getSize());
+        int y = Helper.screenCenter("y", this.getSize());
+        setLocation(x, y);
+
+        this.setVisible(true);
+        btn_login.addActionListener(e -> {
+            JTextField[] checkFieldList = {this.fld_username,this.fld_pass};
+            if (Helper.isFieldListEmpty(checkFieldList)){
+                Helper.showMsg("fill");
+            }else {
+                User loginUser = this.userManager.findByLogin(this.fld_username.getText(),this.fld_pass.getText());
+                if ( loginUser == null){
+                    Helper.showMsg("notFound");
+                }else {
+                    if ("admin".equals(loginUser.getType())){
+                        AdminGUI adminGUI = new AdminGUI(loginUser);
+                        dispose();
+                    }else {
+                        EmployeeGUI employeeGUI = new EmployeeGUI(loginUser);
+                        dispose();
+                    }
+
+                }
+            }
+
+
+        });
+    }
+}
