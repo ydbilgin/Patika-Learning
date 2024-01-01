@@ -1,8 +1,8 @@
-package com.patikadev.Model;
+package PatikaKlonu.Model;
 
-import com.patikadev.Helper.DBConnector;
+import PatikaKlonu.Helper.DbConnector;
 
-import java.sql.PreparedStatement;
+import java.lang.reflect.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,31 +33,20 @@ public class Patika {
         this.name = name;
     }
 
-    public static ArrayList<Patika> getList(){
+    public static ArrayList<Patika> getList() {
         ArrayList<Patika> patikaList = new ArrayList<>();
         Patika obj;
+
         try {
-            Statement st = DBConnector.getInstance().createStatement();
+            Statement st = DbConnector.getInstance().createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM patika");
             while (rs.next()){
-                obj= new Patika(rs.getInt("id"),rs.getString("name"));
+                obj = new Patika(rs.getInt("id"), rs.getString("name"));
                 patikaList.add(obj);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return patikaList;
-    }
-
-    public static boolean add(String name){
-        String query = "INSERT INTO patika (name) VALUES (?)";
-        try {
-            PreparedStatement pr = DBConnector.getInstance().prepareStatement(query);
-            pr.setString(1,name);
-            return pr.executeUpdate() != -1;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return true;
     }
 }
