@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-image: url(https://www.olimpikhavuz.com/wp-content/uploads/2017/06/slider-olimpik-havuz-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+nav {
+    background-color: #2980b9;
+}
+
+nav ul {
+    list-style-type:circle;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #3498db;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#resim1{
+    text-align: center;
+}
