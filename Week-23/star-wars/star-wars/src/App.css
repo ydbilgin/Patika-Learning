@@ -1,0 +1,134 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgb(35, 47, 108);
+  background: linear-gradient(
+    13deg,
+    rgba(35, 47, 108, 1) 20%,
+    rgba(135, 16, 41, 1) 100%
+  );
+}
+
+.header {
+  text-align: center;
+  color: #333;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.starship-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.starship-item {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.starship-item:hover {
+  background-color: #f9f9f9;
+}
+
+.starship-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  color: #333;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+}
+
+.close-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
