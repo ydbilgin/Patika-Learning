@@ -1,0 +1,5 @@
+.question-answer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+}

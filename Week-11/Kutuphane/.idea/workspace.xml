@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10df4d93-53a7-48e7-9282-93c38754b26d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Week-12/library/src/main/java/dev/patika/library/entities/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-12/library/src/main/java/dev/patika/library/entities/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-12/library/src/main/java/dev/patika/library/entities/BookBorrowing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-13-14/VeterinerYönetimSistemi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-20/asiankitchen/ss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-8/TurizmAcenteSistemi/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week-8/TurizmAcenteSistemi/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +49,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/Library2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "H:/PatikaLearning/Week-11/Kutuphane",
     "onboarding.tips.debug.path": "H:/PatikaLearning/Week-11/Kutuphane/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -71,6 +79,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

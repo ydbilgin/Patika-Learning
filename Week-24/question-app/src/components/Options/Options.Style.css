@@ -1,0 +1,32 @@
+.options {
+  max-width: 800px;
+  list-style-type: lower-latin;
+  list-style-position: inside;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 20px;
+  margin-left: 11%;
+  font-size: 24px;
+  align-items: center;
+}
+
+.options li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-left: 5%;
+  border: 1px solid black;
+}
+
+.option {
+  width: 400px;
+  height: 50px;
+  max-height: 100px;
+}
+
+.options li:hover {
+  background-color: gray;
+  color: red;
+}

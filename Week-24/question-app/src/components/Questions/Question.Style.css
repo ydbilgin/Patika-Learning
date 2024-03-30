@@ -1,0 +1,42 @@
+.question-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  width: 500px;
+  height: 200px;
+}
+
+.question {
+  max-width: 900px;
+  max-height: 200px;
+  justify-content: start;
+  justify-self: start;
+  justify-items: start;
+  font-size: 24px;
+  align-self: center;
+}
+
+.question-div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: start;
+  width: 1000px;
+  max-height: 100px;
+}
+
+.question-number-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: turquoise;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+}
+
+.question-number-circle {
+  font-size: 24px;
+  font-weight: bold;
+}

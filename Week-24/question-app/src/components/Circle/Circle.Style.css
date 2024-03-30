@@ -1,0 +1,13 @@
+.circle {
+  justify-self: end;
+}
+
+svg text {
+  justify-self: end;
+  align-self: center;
+  font-size: 2em;
+  color: black;
+}
+.timer-content {
+  justify-items: center;
+}

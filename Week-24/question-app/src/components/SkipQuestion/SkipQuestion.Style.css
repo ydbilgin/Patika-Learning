@@ -1,0 +1,17 @@
+.skip-question-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.3s;
+  margin: 0px 50px;
+}
+
+.skip-question-button:hover {
+  background-color: #e64d00;
+}
