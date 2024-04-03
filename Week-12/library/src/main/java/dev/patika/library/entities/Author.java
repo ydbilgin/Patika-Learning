@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "authors")
@@ -31,6 +32,10 @@ public class Author {
     @Column(name = "author_country")
     @NotNull
     private String country;
+
+    @OneToMany(mappedBy = "author",fetch = FetchType.LAZY , cascade = CascadeType.REMOVE )
+    private List<Book> bookList;
+
 
 
 
